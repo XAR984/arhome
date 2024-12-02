@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff7e6;
+    margin: 0;
+    overflow-x: hidden; /* Ensures no horizontal scroll */
+    overflow-y: auto;   /* Enables vertical scroll */
+    position: relative;
+}
+
+.top-panel {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: #ff7f00;
+    transition: background-color 0.3s;
+}
+
+.nav-button {
+    border: none;
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: white;
+    background-color: #ff7f00;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 100px auto 20px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    z-index: 20;
+    transition: border-color 0.3s;
+}
+
+h1 {
+    font-size: 24px;
+    color: #ff7f00;
+    transition: color 0.3s;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+}
+
+#previews {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+#previews div {
+    text-align: center;
+}
+
+#previews img {
+    max-width: 300px;
+    max-height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+    background-color: #ff7f00;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px) brightness(1.5);
+    z-index: 5;
+    display: none;
+}
+
+.how-to-guide {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.how-to-guide h2 {
+    font-size: 22px;
+    color: #ff7f00;
+}
+
+.how-to-guide ol {
+    padding-left: 20px;
+}
+
+.dropzone {
+    border: 2px dashed #ff7f00;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #ff7f00;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.dropzone:hover {
+    background-color: #fff0e5;
+}
+
+.quality-settings {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.quality-settings label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.quality-settings input[type="range"] {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.progress {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #ff7f00;
+    transition: width 0.3s;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin-top: 120px;
+    }
+    
+    #previews {
+        flex-direction: column;
+    }
+    
+    #previews div {
+        margin-bottom: 20px;
+    }
+}

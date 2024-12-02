@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کم حجم کننده ی تصویر</title>
+    <link rel="stylesheet" href="ICstyles.css">
+</head>
+<body>
+    <div class="top-panel">
+        <button class="nav-button" onclick="location.href='https://github.com/XAR984'">ارتباط</button>
+        <button class="nav-button" onclick="location.href='index.html'">خانه</button>
+    </div>
+    <div class="container">
+        <h1>کم حجم کننده ی تصویر</h1>
+        
+        <!-- Drag and Drop Zone -->
+        <div class="dropzone" id="dropzone">
+            <p>عکس را به اینجا بکشید یا برای انتخاب کلیک کنید</p>
+        </div>
+        <input type="file" id="upload" accept="image/*" style="display: none;">
+        
+        <!-- Compression Quality Slider -->
+        <div class="quality-settings">
+            <label for="quality">کیفیت فشرده سازی: <span id="quality-value">60</span>%</label>
+            <input type="range" id="quality" name="quality" min="1" max="100" value="60">
+        </div>
+
+        <!-- Progress Indicator -->
+        <div id="progress" class="progress" style="display: none;">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div id="previews" style="display: none;">
+            <div>
+                <h2>عکس اصلی</h2>
+                <img id="original-image" src="" alt="Original Image">
+                <p id="original-size"></p>
+            </div>
+            <div>
+                <h2>عکس حجیم شده</h2>
+                <img id="compressed-image" src="" alt="Compressed Image">
+                <p id="compressed-size"></p>
+            </div>
+        </div>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <a id="download" style="display: none;" class="button">دانلود عکس کم حجم شده</a>
+        <button id="download-all" style="display: none;" class="button">دانلود همه</button>
+        
+        <div class="how-to-guide">
+            <h2>نحوه ی استفاده از ابزار کم حجم کننده ی عکس</h2>
+            <ol>
+                <li>از نوار کیفیت برای تنظیم میزان فشرده سازی استفاده کنید</li>
+                <li>عکس را به ناحیه کشیده و رها کنید یا برای انتخاب فایل کلیک کنید</li>
+                <li>صبر کنید تا تصویر پردازش شود. پیش نمایش تصاویر اصلی و فشرده را مشاهده خواهید کرد</li>
+                <li>بر روی دانلود کلیک کنید تا تصویر بر دستگاه شما دانلود شود</li>
+            </ol>
+        </div>
+    </div>
+
+    <div id="background" class="background"></div>
+
+    <script src="compress.js"></script>
+</body>
+</html>

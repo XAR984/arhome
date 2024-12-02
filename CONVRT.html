@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تبدیل واحدها</title>
+    <link rel="stylesheet" href="Convstyles.css">
+</head>
+<body>
+    <video class="background-video" autoplay loop muted>
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+    <div class="top-bar">
+        <button onclick="window.location.href='http://github.com/XAR984'">ارتباط</button>
+        <button onclick="window.location.href='index.html'">خانه</button>
+    </div>
+    <div class="container">
+        <h2>طول</h2>
+        <input type="number" id="lengthInput" placeholder="مقدار را وارد کنید">
+        <select id="lengthFrom">
+            <option value="cm">سانتی متر</option>
+            <option value="m">متر</option>
+            <option value="km">کیلومتر</option>
+            <option value="inch">اینچ</option>
+            <option value="ft">فوت</option>
+            <option value="yd">یارد</option>
+        </select>
+        <select id="lengthTo">
+            <option value="m">متر</option>
+            <option value="cm">سانتی متر</option>
+            <option value="km">کیلومتر</option>
+            <option value="inch">اینچ</option>
+            <option value="ft">فوت</option>
+            <option value="yd">یارد</option>
+        </select>
+        <button onclick="convertLength()">تبدیل</button>
+        <p id="lengthResult">نتیجه: </p>
+
+        <h2>وزن</h2>
+        <input type="number" id="weightInput" placeholder="مقدار را وارد کنید">
+        <select id="weightFrom">
+            <option value="g">گرم</option>
+            <option value="kg">کیلوگرم</option>
+            <option value="lb">پوند</option>
+            <option value="oz">اونس</option>
+        </select>
+        <select id="weightTo">
+            <option value="kg">کیلوگرم</option>
+            <option value="g">گرم</option>
+            <option value="lb">پوند</option>
+            <option value="oz">اونس</option>
+        </select>
+        <button onclick="convertWeight()">تبدیل</button>
+        <p id="weightResult">نتیجه: </p>
+
+        <h2>دما</h2>
+        <input type="number" id="tempInput" placeholder="مقدار را وارد کنید">
+        <select id="tempFrom">
+            <option value="celsius">سانتی‌گراد</option>
+            <option value="fahrenheit">فارنهایت</option>
+            <option value="kelvin">کلوین</option>
+        </select>
+        <select id="tempTo">
+            <option value="celsius">سانتی‌گراد</option>
+            <option value="fahrenheit">فارنهایت</option>
+            <option value="kelvin">کلوین</option>
+        </select>
+        <button onclick="convertTemperature()">تبدیل</button>
+        <p id="tempResult">نتیجه: </p>
+
+        <h2>حجم</h2>
+        <input type="number" id="volumeInput" placeholder="مقدار را وارد کنید">
+        <select id="volumeFrom">
+            <option value="ml">میلی لیتر</option>
+            <option value="l">لیتر</option>
+            <option value="cubicm">متر مکعب</option>
+            <option value="cubiccm">سانتی متر مکعب</option>
+        </select>
+        <select id="volumeTo">
+            <option value="l">لیتر</option>
+            <option value="ml">میلی لیتر</option>
+            <option value="cubicm">متر مکعب</option>
+            <option value="cubiccm">سانتی متر مکعب</option>
+        </select>
+        <button onclick="convertVolume()">تبدیل</button>
+        <p id="volumeResult">نتیجه: </p>
+    </div>
+    <script src="Convscripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خانه</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: rgb(3, 3, 3);
+            color: white;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(8px) brightness(0.5);
+            z-index: -1;
+        }
+        .container {
+            text-align: center;
+            z-index: 1;
+            padding: 20px;
+        }
+        .option {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .option img {
+            width: 100px;
+            height: 100px;
+        }
+        .option:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        .footer-link {
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay loop muted>
+        <source src="vid.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <h1>خانه</h1>
+        <div class="option" onclick="window.location.href='SC.html'">
+            <img src="op1.jpg" alt="ضبط کننده صفحه">
+            <h2>ضبط کننده صفحه</h2>
+        </div>
+        <div class="option" onclick="window.location.href='IMGCOM.html'">
+            <img src="op2.jpg" alt="فشرده ساز تصویر">
+            <h2>فشرده ساز تصویر</h2>
+        </div>
+        <div class="option" onclick="window.location.href='CONVRT.html'">
+            <img src="ChV.png" alt="تبدیل واحد عدد">
+            <h2>تبدیل واحد عدد</h2>
+        </div>
+    </div>
+    <a href="http://github.com/XAR984" class="footer-link">@XAR984</a>
+</body>
+</html>
